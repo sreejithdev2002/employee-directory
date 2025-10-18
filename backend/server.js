@@ -3,16 +3,8 @@ const { ApolloServer } = require("apollo-server");
 const typeDefs = require("./graphql/schema");
 const resolvers = require("./graphql/resolvers");
 const { connect, client } = require("./db");
-const cors = require("cors");
 
 const PORT = process.env.PORT || 4000;
-
-app.use(
-  cors({
-    origin: process.env.NEXTJS_FRONTEND_URL,
-    credentials: true,
-  })
-);
 
 async function start() {
   const db = await connect();

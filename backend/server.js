@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { AppoloServer, ApolloServer } = require("apollo-server");
+const { ApolloServer } = require("apollo-server");
 const typeDefs = require("./graphql/schema");
 const resolvers = require("./graphql/resolvers");
 const { connect, client } = require("./db");

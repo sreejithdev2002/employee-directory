@@ -18,10 +18,6 @@ function departmentToObj(dept) {
 
 const resolvers = {
   Query: {
-    // getAllEmployees: async (_, __, { db }) => {
-    //   const emloyees = await db.collection("employees").find({}).toArray();
-    //   return emloyees.map(toEmployeeSummary);
-    // },
     getAllEmployees: async (_, __, { db }) => {
       const employees = await db.collection("employees").find({}).toArray();
 
